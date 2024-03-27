@@ -10,6 +10,9 @@ module.exports = {
         light: 300,
         bold: 700,
       },
+      colors: {
+        "red-accent": "#FF3535",
+      },
     },
   },
   variants: {

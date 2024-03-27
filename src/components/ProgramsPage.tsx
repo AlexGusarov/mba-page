@@ -64,24 +64,39 @@ const ProgramsPage: React.FC = () => {
   }, []);
 
   return (
-    <div className='max-w-screen-2xl mx-auto box-border pt-[71px]'>
-      <h2 className='text-4xl font-bold text-center'>Специализированные дисциплины</h2>
+    <main className='max-w-7xl mx-auto box-border pt-[71px] pb-[171px]'>
+      <h2 className='text-4xl font-bold text-center pb-[89px]'>Специализированные дисциплины</h2>
       {programs?.map((program, index) => (
         <div key={index}>
-          <h3 className='text-[26px] font-bold'>{program.programTitle}</h3>
+          <h3 className='text-[26px] font-bold pb-[54px]'>{program.programTitle}</h3>
+          <div className='flex gap-[45px]'>
           {program.modules?.map((module, modIndex) => (
-            <div key={modIndex}>
-              <h4 className='text-[32px]'>{module.moduleName}</h4>
-              <ul>
+            <div key={modIndex} className='flex gap-[82px] pb-[68px]'>
+              <h4 className='text-[32px] module-title'>{module.moduleName}</h4>
+              <ul className='max-w-[373px] custom-bullet flex flex-col gap-[10px]'>
                 {module.skillsTitles?.map((title, skillIndex) => (
                   <li key={skillIndex} className='font-light text-base'>{title}</li>
                 ))}
               </ul>
             </div>
           ))}
+          </div>
         </div>
       ))}
-    </div>
+      <div className='flex gap-[30px]'>
+        <div className='flex flex-col gap-[10px] w-[628px] h-[293px] info-accent px-[57px] py-[52px] box-border'>
+          <h4 className='font-bold text-[36px] text-white mb-6'>Практические модули</h4>
+          <p className='text-xl text-white font-light'>Работа над собственными проектами: практика групповых взаимодействий, кейс-методы, эссе</p>
+        </div>
+        <div className='flex flex-col w-[628px] h-[293px] px-[57px] py-[52px] bg-[#2D2C2A] box-border'>
+          <h4 className='font-bold text-[36px] text-white mb-6'>Итоговая аттестация</h4>
+          <ul className='custom-bullet text-xl text-white font-light leading-tight'>
+            <li className='mb-[10px]'>Бизнес-проектирование (подготовка итоговой аттестационной работы, консультрование по бизнес-проектированию)</li>
+            <li>Защита итоговой аттестационной работы</li>
+          </ul>
+        </div>
+      </div>
+    </main>
   );
 };
 
