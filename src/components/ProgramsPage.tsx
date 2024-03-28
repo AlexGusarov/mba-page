@@ -28,8 +28,8 @@ const ProgramsPage: React.FC = () => {
   }, []);
 
   return (
-    <main className="max-w-7xl mx-auto box-border pt-[71px] pb-[171px]">
-      <h2 className="text-4xl font-bold text-center pb-[89px]">
+    <main className="max-w-7xl mx-auto box-border pt-[28px] px-[15px] pb-[47px] md:pt-[71px] md:pb-[171px] md:px-0">
+      <h2 className="text-[28px] text-left mx-auto font-medium md:text-4xl md:font-bold md:text-center mb-[34px] md:mb-[89px]">
         Специализированные дисциплины
       </h2>
       {isLoading ? (
@@ -37,18 +37,18 @@ const ProgramsPage: React.FC = () => {
       ) : (
         <>
           {programs?.map((program, index) => (
-            <div key={index}>
-              <h3 className="text-[26px] font-bold pb-[54px]">
+            <div key={index} className="mb-[26px] md:mb-[68px]">
+              <h3 className="text-[22px] md:text-[26px] font-bold p-0 mb-[27px] md:mb-[54px]">
                 {program.programTitle}
               </h3>
-              <div className="flex gap-[45px]">
+              <div className="flex flex-col gap-[10px] md:flex-row md:gap-[45px]">
                 {program.modules?.map((module, modIndex) => (
                   <ModuleCard key={modIndex} module={module} />
                 ))}
               </div>
             </div>
           ))}
-          <div className="flex gap-[30px]">
+          <div className="flex flex-col md:flex-row gap-[30px]">
             <InfoCard
               title="Практические модули"
               content="Работа над собственными проектами: практика групповых взаимодействий, кейс-методы, эссе"

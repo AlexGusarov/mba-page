@@ -11,9 +11,11 @@ const InfoCard: React.FC<InfoCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col gap-[10px] w-[628px] h-[293px] px-[57px] py-[52px] box-border ${className}`}
+      className={`flex flex-col w-[345px] md:w-[628px] md:h-[293px] px-[17px] py-[31px] md:px-[57px] md:py-[52px] box-border ${className}`}
     >
-      <h4 className="font-bold text-[36px] text-white mb-6">{title}</h4>
+      <h4 className="font-bold text-[25px] md:text-[36px] text-white mb-6">
+        {title}
+      </h4>
       {typeof content === 'string' ? (
         <p className="text-xl text-white font-light">{content}</p>
       ) : (
