@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ToggleIcon from './ToggleIcon';
 import { Module } from '../types/types';
 
@@ -14,7 +14,7 @@ const ModuleCard: React.FC<ModuleCardProps> = ({ module }) => {
   };
 
   return (
-    <div className="flex flex-col gap-[17px] md:flex-row md:gap-20 md:pb-17">
+    <div className="flex flex-col gap-[17px] md:w-[628px] md:flex-row md:gap-20 md:pb-17">
       <button
         onClick={toggleSkills}
         className={`w-[345px] h-[51px] flex items-center gap-[27px] px-6 mx-auto ${isOpen ? 'bg-red-accent text-white' : 'bg-[#F7F7F7] text-[#262626]'}  text-lg font-light md:hidden`}

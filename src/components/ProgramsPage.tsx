@@ -28,7 +28,7 @@ const ProgramsPage: React.FC = () => {
   }, []);
 
   return (
-    <main className="max-w-7xl mx-auto box-border pt-[28px] px-[15px] pb-[47px] md:pt-[71px] md:pb-[171px] md:px-0">
+    <main className="max-w-7xl flex flex-col justify-center mx-auto box-border pt-[28px] px-[15px] pb-[47px] md:pt-[71px] md:pb-[171px] md:px-0">
       <h2 className="text-[28px] text-left mx-auto font-medium md:text-4xl md:font-bold md:text-center mb-[34px] md:mb-[89px]">
         Специализированные дисциплины
       </h2>
