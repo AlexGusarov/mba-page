@@ -14,12 +14,12 @@
 1. Склонируйте репозиторий:
 
    ```
-   git clone https://github.com/AlexGusarov/Memo.git
+   git clone https://github.com/AlexGusarov/mba-page.git
    ```
 2. Перейдите в директорию проекта:
 
    ```
-   cd memo
+   cd mba-page
    ```
 3. Установите зависимости:
 
